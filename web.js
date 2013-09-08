@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Define routes for simple SSJS web app. 
 // Writes Coinbase orders to database.
 var async   = require('async')
@@ -70,6 +69,12 @@ app.get('/refresh_orders', function(request, response) {
 
 });
 
+// serve static files
+app.use("/img", express.static(__dirname + '/img'));
+app.use("/font", express.static(__dirname + '/font'));
+app.use("/css", express.static(__dirname + '/css'));
+app.use("/js", express.static(__dirname + '/js'));
+
 // sync the database and start the server
 db.sequelize.sync().complete(function(err) {
   if (err) {
@@ -110,20 +115,3 @@ var addOrder = function(order_obj, callback) {
     });
   }
 };
-=======
-var express = require('express');
-var fs = require('fs');
-
-var app = express.createServer(express.logger());
-
-app.get('/', function(request, response) {
-  var buffer = fs.readFileSync("./index.html");
-//  response.send('Hello World 2!');
-  response.send(buffer.toString());
-});
-
-var port = process.env.PORT || 8080;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
->>>>>>> 890ef714e1b2ab4916f40e097dae4d5a7ab64607

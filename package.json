@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "bitstarter-ssjs-orders",
   "version": "0.0.1",
   "description": "Simple server-side JS order processing",
@@ -19,15 +18,3 @@
     "npm": "1.2.30"
   }
 }
-=======
-  "name": "node-example",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "2.5.x"
-  },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
-  }
-}
->>>>>>> 890ef714e1b2ab4916f40e097dae4d5a7ab64607
